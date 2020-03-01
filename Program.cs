@@ -9,8 +9,7 @@ namespace planYourHeist
         {
             Console.WriteLine ("Plan Your Heist!");
             Console.WriteLine ("What is the difficulty level of the bank you want to rob?");
-            string bankLevelString = Console.ReadLine ();
-            int bankLevel = int.Parse (bankLevelString);
+            int bankLevel = int.Parse (Console.ReadLine ());
 
             List<Dictionary<string, string>> team = new List<Dictionary<string, string>> ();
 
@@ -63,8 +62,7 @@ namespace planYourHeist
             for (int i = 0; i < trialRunsInt; i++)
             {
                 Console.WriteLine (bankLevel);
-                Random rand = new Random ();
-                int luckNumber = rand.Next (-10, 11);
+                int luckNumber = new Random ().Next (-10, 11);
                 int bankLevelLuck = bankLevel + luckNumber;
 
                 int teamSkillLevel = 0;
@@ -72,7 +70,7 @@ namespace planYourHeist
                 foreach (Dictionary<string, string> member in team)
                 {
                     int memberSkillLevel = int.Parse (member["skillLevel"]);
-                    teamSkillLevel = teamSkillLevel + memberSkillLevel;
+                    teamSkillLevel += memberSkillLevel;
                 }
 
                 Console.WriteLine ($"Your team's skill level is {teamSkillLevel}");
