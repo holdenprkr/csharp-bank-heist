@@ -25,7 +25,7 @@ namespace planYourHeist
                 }
                 teamMember.Add ("name", $"{memberName}");
 
-                Console.WriteLine ("What is your team members skill level (1-50)?");
+                Console.WriteLine ("What is your team members skill level?");
                 string memberSkill = Console.ReadLine ();
                 teamMember.Add ("skillLevel", $"{memberSkill}");
 
