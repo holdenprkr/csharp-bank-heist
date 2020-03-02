@@ -53,7 +53,6 @@ namespace planYourHeist
 
             for (int i = 0; i < trialRunsInt; i++)
             {
-                Console.WriteLine (bankLevel);
                 int luckNumber = new Random ().Next (-10, 11);
                 int bankLevelLuck = bankLevel + luckNumber;
 
@@ -79,6 +78,7 @@ namespace planYourHeist
                     failedAttempts++;
                 }
             }
+            Console.WriteLine ("");
             Console.WriteLine ("Team trial report:");
             Console.WriteLine ($"Successful attempts: {successfulAttempts}");
             Console.WriteLine ($"Failed attempts: {failedAttempts}");
