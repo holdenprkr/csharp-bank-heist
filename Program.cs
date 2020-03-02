@@ -25,11 +25,11 @@ namespace planYourHeist
                 }
                 teamMember.Add ("name", $"{memberName}");
 
-                Console.WriteLine ("What is your team members skill level?");
+                Console.WriteLine ("What is your team members skill level (1-50)?");
                 string memberSkill = Console.ReadLine ();
                 teamMember.Add ("skillLevel", $"{memberSkill}");
 
-                Console.WriteLine ("What is your team members courage factor between 0.0 and 2.0?");
+                Console.WriteLine ("What is your team members courage factor (0.0-2.0)?");
                 string memberCourage = Console.ReadLine ();
                 teamMember.Add ("courageFactor", $"{memberCourage}");
 
@@ -43,14 +43,6 @@ namespace planYourHeist
             }
 
             Console.WriteLine ($"Your team has {team.Count} members.");
-
-            // foreach (Dictionary<string, string> member in team)
-            // {
-            //     foreach (KeyValuePair<string, string> pair in member)
-            //     {
-            //         Console.WriteLine ($"{pair.Key}: {pair.Value}");
-            //     };
-            // }
 
             Console.WriteLine ("How many trial runs would you like to perform?");
             string trialRuns = Console.ReadLine ();
