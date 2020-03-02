@@ -17,7 +17,7 @@ namespace planYourHeist
             {
                 Dictionary<string, string> teamMember = new Dictionary<string, string> ();
 
-                Console.WriteLine ("What is your team members name?");
+                Console.WriteLine ("What is your team member's name?");
                 string memberName = Console.ReadLine ();
                 if (memberName == "")
                 {
@@ -25,11 +25,11 @@ namespace planYourHeist
                 }
                 teamMember.Add ("Name", $"{memberName}");
 
-                Console.WriteLine ("What is your team members skill level?");
+                Console.WriteLine ("What is your team member's skill level?");
                 string memberSkill = Console.ReadLine ();
                 teamMember.Add ("Skill Level", $"{memberSkill}");
 
-                Console.WriteLine ("What is your team members courage factor (0.0-2.0)?");
+                Console.WriteLine ("What is your team member's courage factor (0.0-2.0)?");
                 string memberCourage = Console.ReadLine ();
                 teamMember.Add ("Courage Factor", $"{memberCourage}");
 
@@ -60,7 +60,7 @@ namespace planYourHeist
 
                 foreach (Dictionary<string, string> member in team)
                 {
-                    int memberSkillLevel = int.Parse (member["skillLevel"]);
+                    int memberSkillLevel = int.Parse (member["Skill Level"]);
                     teamSkillLevel += memberSkillLevel;
                 }
 
