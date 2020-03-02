@@ -23,15 +23,15 @@ namespace planYourHeist
                 {
                     break;
                 }
-                teamMember.Add ("name", $"{memberName}");
+                teamMember.Add ("Name", $"{memberName}");
 
                 Console.WriteLine ("What is your team members skill level?");
                 string memberSkill = Console.ReadLine ();
-                teamMember.Add ("skillLevel", $"{memberSkill}");
+                teamMember.Add ("Skill Level", $"{memberSkill}");
 
                 Console.WriteLine ("What is your team members courage factor (0.0-2.0)?");
                 string memberCourage = Console.ReadLine ();
-                teamMember.Add ("courageFactor", $"{memberCourage}");
+                teamMember.Add ("Courage Factor", $"{memberCourage}");
 
                 Console.WriteLine ("Your new team member:");
                 foreach (KeyValuePair<string, string> pair in teamMember)
